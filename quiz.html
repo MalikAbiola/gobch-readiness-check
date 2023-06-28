@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="quiz-final.css">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+    <title>Quiz-Page</title>
+</head>
+<body>
+    <!--QUIZ-QUESTION-->
+
+    <div class="wrapper">
+        <div id="quiz_content_div" class="quiz">
+            <div class="quiz_header">
+                <div class="quiz_user">
+                    <h2>Are You Ready For GOBC&H?</h2>
+                </div>
+            </div>
+
+            <div id="quiz"  class="quiz_body">
+                <div id="questions">
+                </div>
+
+                <button class="btn-next" onclick="next()">Next Question</button>
+            </div>
+        </div>
+        <div id="quiz_result_div" style="display: none">
+          <div class="quiz_header">
+              <div class="quiz_user">
+                  <h2>GOBC&H 2023 Readiness</h2>
+              </div>
+          </div>
+
+          <div id="quiz"  class="quiz_body">
+            <span id="readiness_value"></span>
+            <div id="readiness_bar" class="determinate blue" ></div>
+          </div>
+    </div>
+
+    <script src="quiz.js"></script>
+</body>
+</html>
