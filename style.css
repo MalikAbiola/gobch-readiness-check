@@ -1,0 +1,143 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#top {
+    flex: 1;
+    background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5)), url('./gobc-banner-lifeoasis.png') no-repeat center center fixed; 
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    color: #ffffff;
+}
+
+#top img {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    height: 200px;
+    width: auto;
+}
+.top-banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: #ffffff;
+    padding: 20px 0;
+    font-size: 40px;
+    text-shadow: 0 2px 2px rgba(0,0,0,.5);
+    max-width: 70%;
+    text-align: center;
+    font-size: 50px;
+}
+
+.countdown {
+    display: flex;
+    gap: 20px;
+}
+
+.countdown div {
+    background: rgba(255,255,255,.25);
+    border: 1px solid rgba(255,255,255,.5);
+    box-shadow: 0 5px 50px -10px #000;
+    border-radius: 4px;
+    color: #ffffff;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 30px;
+    font-weight: 700;
+    width: 88px;
+    height: 80px;
+    justify-content: center;
+}
+
+.countdown div span {
+    font-size: 20px;
+    font-weight: normal;
+}
+
+#top a {
+    background-color: #04aeef; 
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+#bottom {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+}
+
+.btn {
+background-color: dodgerblue;
+border: none;
+color: white;
+padding: 15px 30px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 20px;
+margin: 10px 2px !important;
+cursor: pointer;
+transition-duration: 0.4s;
+border-radius: 12px;
+}
+
+.btn:hover {
+background-color: royalblue;
+}
+
+#socials {
+display: flex;
+justify-content: center;
+gap: 10px;
+}
+
+#socials a {
+color: white;
+font-size: 30px;
+background: transparent;
+padding: 2px;
+}
+
+#bottom form {
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 10px;
+}
+
+#bottom input[type=submit] {
+background-color: dodgerblue;
+color: white;
+border: none;
+padding: 10px 20px;
+cursor: pointer;
+border-radius: 12px;
+font-size: 16px;
+}
+
+#bottom input[type=submit]:hover {
+background-color: royalblue;
+}
