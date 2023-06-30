@@ -115,11 +115,7 @@ let correct = 0;
 
 
 window.onload = function(){
-  $( "#readiness_bar" ).progressbar({
-      value: false
-    });
     show(question_count);
-
 };
 
 function show(count){
@@ -167,15 +163,33 @@ function next(){
     return
   }
 
-  let resultDiv = document.getElementById("quiz_result_div");
-  let questionsDiv = document.getElementById("quiz_content_div");
+  let score = Math.ceil((correct / question_count) * 100)
 
-  perc = Math.ceil((correct / question_count) * 100)
+  $("#readiness_value").text(`You are ${score}% ready for GOBC&H 2023`);
+  const circle = document.getElementById('circle');
+  const scoreElement = document.getElementById('score');
+  const circumference = 2 * Math.PI * circle.getAttribute('r');
 
-  $("#readiness_value").text(`You are ${perc}% ready for GOBC&H 2023`);
-  $("#readiness_bar").progressbar( "option", {
-     value: perc
-   })
+  function updateChart(newScore) {
+      const offset = circumference * (100 - score) / 100;
+
+      circle.style.strokeDasharray = `${circumference} ${circumference}`;
+      circle.style.strokeDashoffset = offset;
+
+      if (newScore < 50) {
+          circle.style.stroke = "red";
+      } else if (newScore >= 50 && newScore < 70) {
+          circle.style.stroke = "yellow";
+      } else if (newScore >= 70 && newScore < 100) {
+          circle.style.stroke = "lightgreen";
+      } else {
+          circle.style.stroke = "green";
+      }
+
+      scoreElement.textContent = `${newScore}%`;
+  }
+
+  updateChart(score);
 
 
   $("#quiz_content_div").fadeOut("slow", function(){
