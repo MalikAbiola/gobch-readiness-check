@@ -121,7 +121,7 @@ window.onload = function(){
 function show(count){
     let question = document.getElementById("questions");
 
-    questAndOptionsHtml = `<h3>${questions[count].question}</h3>`
+    questAndOptionsHtml = `<h1 class="question_header">${questions[count].question}</h1>`
     if (questions[count].options.length > 0) {
       questAndOptionsHtml +=  `<ul class="option_group">`
 

@@ -9,9 +9,20 @@
 .quiz{
     display: grid;
     grid-template-rows: 60px auto;
-    width: 600px;
-    height: 500px;
+    width: 90%;
+    height: 100%;
     border-radius: 50px;
+}
+
+.questions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.question_header {
+    text-align: center;
+    font-size: 50px;
 }
 
 .quiz_header{
@@ -36,6 +47,9 @@
     background-color: skyblue;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #readiness_bar .ui-progressbar-value {
@@ -58,7 +72,7 @@
 }
 
 .score {
-    font-size: 2rem;
+    font-size: 4rem;
     text-anchor: middle;
     alignment-baseline: middle;
 }
@@ -86,6 +100,9 @@
 .option_group{
     list-style-type: none;
     margin: 30px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .option{
@@ -97,6 +114,9 @@
     border-radius: 50px;
     border: 2px solid transparent;
     transition: 0.4s all;
+    font-size: 40px;
+    width: 500px;
+    text-align: center;
 }
 
 .option:hover{
@@ -112,11 +132,18 @@
 
 .btn-next{
     border: none;
-    padding: 15px 35px;
+    padding: 35px;
     background-color: #341f97;
     color: #fff;
     border-radius: 50px;
     transition: 0.4s all;
+    font-size: 40px;
+    width: 400px;
+}
+
+#quiz_result_div {
+    width: 90%;
+    height: 100%;
 }
 
 .btn-next:hover{
