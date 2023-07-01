@@ -165,7 +165,7 @@ function next(){
 
   let score = Math.ceil((correct / question_count) * 100)
 
-  $("#readiness_value").text(`You are ${score}% ready for GOBC&H 2023`);
+  $("#readiness_value").html(`You are <strong>${score}%</strong> ready for GOBC&H 2023`);
   const circle = document.getElementById('circle');
   const scoreElement = document.getElementById('score');
   const circumference = 2 * Math.PI * circle.getAttribute('r');

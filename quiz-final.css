@@ -26,7 +26,6 @@
 }
 
 .quiz_header{
-    display: flex;
     justify-content: space-between;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
@@ -36,10 +35,14 @@
 }
 
 .quiz_user{
-    display: flex;
     align-items: center;
     height: 100%;
     padding-left: 30px;
+}
+
+#readiness_value {
+    text-align: center;
+    font-size: 30px;
 }
 
 .quiz_body{
